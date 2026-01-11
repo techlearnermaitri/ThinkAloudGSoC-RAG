@@ -1,1 +1,5 @@
 #requirements
+gradio
+requests
+sentence-transformers
+faiss-cpu
