@@ -10,12 +10,16 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 for sub in SUBS:
     transcript_path = f"{sub}/func/{sub}_task-thinkaloud_transcript.txt"
     url = f"{BASE_URL}/{transcript_path}"
-    r = requests.get(url)
-    if r.status_code == 200:
-        out_file = os.path.join(OUTPUT_DIR, f"{sub}_task-thinkaloud_transcript.txt")
-        with open(out_file, "w", encoding="utf-8") as f:
-            f.write(r.text)
-        print(f"Downloaded {out_file}")
-    else:
-        print(f"Skipping {sub}, file not found.")
+    try:
+        r = requests.get(url)
+        if r.status_code == 200:
+            out_file = os.path.join(OUTPUT_DIR, f"{sub}_task-thinkaloud_transcript.txt")
+            with open(out_file, "w", encoding="utf-8") as f:
+                f.write(r.text)
+            print(f"Downloaded {out_file}")
+        else:
+            print(f"Skipping {sub}, file not found.")
+    except Exception as e:
+        print(f"Error fetching {sub}: {e}")
+
 print("All available transcripts downloaded.")
