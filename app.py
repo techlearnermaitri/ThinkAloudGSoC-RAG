@@ -15,4 +15,13 @@ from langchai.prompts import PromptTemplate
 
 from datetime  import datetime
 
-#text chunking imports
+#text chunking to get text from pdf
+def get_pdf_text(pdf_doc):
+    text="" #this is oen  empty string
+    for pdf in pdf_docs:
+        pdf_reader=PdfReader(pdf)
+        for page in pdf_reader.pages:
+            text+=page.extract_text()
+    return text
+
+#to get chunks of text
