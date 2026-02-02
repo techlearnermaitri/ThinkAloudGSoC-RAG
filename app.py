@@ -15,6 +15,7 @@ from langchai.prompts import PromptTemplate
 
 from datetime  import datetime
 
+<<<<<<< HEAD
 #text chunking to get text from pdf
 def get_pdf_text(pdf_doc):
     text="" #this is oen  empty string
@@ -25,3 +26,6 @@ def get_pdf_text(pdf_doc):
     return text
 
 #to get chunks of text
+=======
+#text chunking imports
+>>>>>>> ff8b6d2 (imported neccesary files and create a myenv)

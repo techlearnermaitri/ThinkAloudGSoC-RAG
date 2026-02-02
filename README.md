@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 InsightPop: Agentic RAG for KnowledgeSpace
 InsightPop is an intelligent AI agent designed for KnowledgeSpace, facilitating cross-document QA and deep research. By leveraging Retrieval-Augmented Generation (RAG), it transforms static research papers and metadata into a dynamic, conversational knowledge base.
 
@@ -63,3 +64,9 @@ InsightPop Response:
 
 
 
+=======
+# ThinkAloudGSoC-RAG
+A RAG-based AI using the ThinkAloud dataset for cognitive analysis
+python3 -m venv myenv
+myenv/scripts/activate
+>>>>>>> ff8b6d2 (imported neccesary files and create a myenv)
