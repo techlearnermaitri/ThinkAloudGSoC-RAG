@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 InsightPop: Agentic RAG for KnowledgeSpace
 InsightPop is an intelligent AI agent designed for KnowledgeSpace, facilitating cross-document QA and deep research. By leveraging Retrieval-Augmented Generation (RAG), it transforms static research papers and metadata into a dynamic, conversational knowledge base.
 
+=======
+>>>>>>> 4a8b1d2 (Resolve merge conflicts)
 
 Problem Statement
 All research generates massive volumes of complex literature and data. Finding specific, cross-referenced information across diverse datasets is manually intensive. InsightPop solves this by:
@@ -54,19 +57,4 @@ User Query: "How does dopamine regulation in the striatum differ between Parkins
 InsightPop Response:
 
 "Based on 4 retrieved documents from KnowledgeSpace: In Parkinson's, dopamine depletion occurs primarily in the substantia nigra... [Source: Smith et al., 2024]. Conversely, in Huntington's..."
-   
-   
 
-
-
-
-
-
-
-
-=======
-# ThinkAloudGSoC-RAG
-A RAG-based AI using the ThinkAloud dataset for cognitive analysis
-python3 -m venv myenv
-myenv/scripts/activate
->>>>>>> ff8b6d2 (imported neccesary files and create a myenv)
