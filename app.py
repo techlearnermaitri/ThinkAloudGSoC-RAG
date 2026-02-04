@@ -26,6 +26,16 @@ def get_pdf_text(pdf_doc):
     return text
 
 #to get chunks of text
-=======
-#text chunking imports
->>>>>>> ff8b6d2 (imported neccesary files and create a myenv)
+def get_text_chunks(text,model_name):
+    if model_name=="Google AI":
+        text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=1000)
+    chunks=text_splitter.split_text(text)
+    return chunks
+
+#embedding chunks and them in vector store 
+def get_vector_store(text_chunks,model_name,api_key=None):
+    if model_name == "Google AI":
+        embeddings=GoogleGenerativeAIEmbeddings(model="model/embedding-001",google_api_keys=api_key)
+    vector_store=FAISS.from_texts(text_chunks,embedding=embeddings)
+    vector_store.save_local("faiss_index")
+    return vector_store
